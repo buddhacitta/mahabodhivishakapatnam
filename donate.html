@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | Mahabodhi Visakhapatnam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    <div class="particles"></div>
+    
+    <!-- Global Search Overlay -->
+    <div class="global-search-overlay">
+        <div class="global-search-container">
+            <div class="global-search-header">
+                <h3 class="global-search-title">Search Everything</h3>
+                <button class="search-close">×</button>
+            </div>
+            <input type="text" class="global-search-input" placeholder="Search for content, teachings, or events...">
+            
+            <div class="search-loading">
+                <div class="loading-spinner"></div>
+                <div class="loading-text">Searching<span class="loading-dots"></span></div>
+            </div>
+            
+            <div class="global-search-results"></div>
+        </div>
+    </div>
+    
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="cyber-text">MAHABODHI VISAKHAPATNAM</span>
+            </div>
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="donate.html" class="nav-link active">Donate</a></li>
+                </ul>
+                <div class="nav-link search-icon" title="Search Everything">
+                    <span class="search-text">Search</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="page-container">
+            <h1 class="page-title">Support Our Mission</h1>
+            
+            <div class="donate-intro">
+                <div class="content-card">
+                    <h2 style="color: #00ffff; margin-bottom: 1rem;">Dana - The Practice of Giving</h2>
+                    <p>In Buddhism, Dana (giving) is one of the most important practices for spiritual development. Your generous donations help us continue our mission of spreading Buddhist teachings, supporting meditation programs, and serving the community.</p>
+                </div>
+            </div>
+            
+            <div class="donation-options">
+                <div class="donation-cards">
+                    <div class="donation-card">
+                        <div class="donation-icon">🏛️</div>
+                        <h3>Center Maintenance</h3>
+                        <p>Help us maintain our meditation hall, library, and facilities for the benefit of all practitioners.</p>
+                        <div class="suggested-amounts">
+                            <span class="amount-tag">₹500</span>
+                            <span class="amount-tag">₹1000</span>
+                            <span class="amount-tag">₹2500</span>
+                        </div>
+                    </div>
+                    
+                    <div class="donation-card">
+                        <div class="donation-icon">📚</div>
+                        <h3>Dharma Education</h3>
+                        <p>Support our teaching programs, workshops, and educational materials for dharma study.</p>
+                        <div class="suggested-amounts">
+                            <span class="amount-tag">₹300</span>
+                            <span class="amount-tag">₹750</span>
+                            <span class="amount-tag">₹1500</span>
+                        </div>
+                    </div>
+                    
+                    <div class="donation-card">
+                        <div class="donation-icon">🤝</div>
+                        <h3>Community Service</h3>
+                        <p>Fund our charitable activities, food distribution, and social welfare programs.</p>
+                        <div class="suggested-amounts">
+                            <span class="amount-tag">₹200</span>
+                            <span class="amount-tag">₹500</span>
+                            <span class="amount-tag">₹1000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="donation-card">
+                        <div class="donation-icon">🎋</div>
+                        <h3>Special Events</h3>
+                        <p>Sponsor Buddhist festivals, cultural events, and special dharma programs.</p>
+                        <div class="suggested-amounts">
+                            <span class="amount-tag">₹1000</span>
+                            <span class="amount-tag">₹2500</span>
+                            <span class="amount-tag">₹5000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="donation-form-container">
+                <div class="content-card">
+                    <h2 style="color: #00ffff; margin-bottom: 2rem; text-align: center;">Make a Donation</h2>
+                    
+                    <form id="donationForm" class="donation-form">
+                        <div class="form-section">
+                            <h3 style="color: #ff00ff; margin-bottom: 1rem;">Donation Details</h3>
+                            
+                            <div class="form-group">
+                                <label for="donationType">Donation Type</label>
+                                <select id="donationType" name="donationType" required>
+                                    <option value="">Select donation type</option>
+                                    <option value="general">General Donation</option>
+                                    <option value="maintenance">Center Maintenance</option>
+                                    <option value="education">Dharma Education</option>
+                                    <option value="community">Community Service</option>
+                                    <option value="events">Special Events</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="donationAmount">Amount (₹)</label>
+                                <div class="amount-input-group">
+                                    <span class="currency-symbol">₹</span>
+                                    <input type="number" id="donationAmount" name="donationAmount" min="100" required>
+                                </div>
+                                <div class="quick-amounts">
+                                    <button type="button" class="quick-amount" data-amount="500">₹500</button>
+                                    <button type="button" class="quick-amount" data-amount="1000">₹1000</button>
+                                    <button type="button" class="quick-amount" data-amount="2500">₹2500</button>
+                                    <button type="button" class="quick-amount" data-amount="5000">₹5000</button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="frequency">Donation Frequency</label>
+                                <div class="frequency-options">
+                                    <label class="radio-option">
+                                        <input type="radio" name="frequency" value="once" checked>
+                                        <span class="radio-label">One-time</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="frequency" value="monthly">
+                                        <span class="radio-label">Monthly</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="frequency" value="yearly">
+                                        <span class="radio-label">Yearly</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3 style="color: #ff00ff; margin-bottom: 1rem;">Donor Information</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="donorName">Full Name</label>
+                                    <input type="text" id="donorName" name="donorName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="donorEmail">Email Address</label>
+                                    <input type="email" id="donorEmail" name="donorEmail" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="donorPhone">Phone Number</label>
+                                    <input type="tel" id="donorPhone" name="donorPhone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="donorCity">City</label>
+                                    <input type="text" id="donorCity" name="donorCity">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="donorMessage">Message (Optional)</label>
+                                <textarea id="donorMessage" name="donorMessage" rows="3" placeholder="Share your thoughts or dedication..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <div class="donation-summary">
+                                <h3 style="color: #ff00ff; margin-bottom: 1rem;">Donation Summary</h3>
+                                <div class="summary-item">
+                                    <span>Amount:</span>
+                                    <span id="summaryAmount">₹0</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Type:</span>
+                                    <span id="summaryType">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Frequency:</span>
+                                    <span id="summaryFrequency">One-time</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="anonymous" id="anonymous">
+                                    <span class="checkbox-label">Make this donation anonymous</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="newsletter" id="newsletter">
+                                    <span class="checkbox-label">Subscribe to our newsletter</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn donation-btn">
+                            <span class="btn-icon">🙏</span>
+                            <span class="btn-text">Proceed to Payment</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="donation-info">
+                <div class="content-card">
+                    <h2 style="color: #00ffff; margin-bottom: 1rem;">Other Ways to Support</h2>
+                    
+                    <div class="support-options">
+                        <div class="support-option">
+                            <h4>Bank Transfer</h4>
+                            <p>Account Name: Mahabodhi Visakhapatnam<br>
+                            Account Number: XXXX-XXXX-XXXX<br>
+                            IFSC Code: XXXXXXX<br>
+                            Bank: State Bank of India</p>
+                        </div>
+                        
+                        <div class="support-option">
+                            <h4>Volunteer</h4>
+                            <p>Offer your time and skills to help with our programs, events, and community service activities.</p>
+                        </div>
+                        
+                        <div class="support-option">
+                            <h4>Sponsor Programs</h4>
+                            <p>Sponsor specific meditation retreats, dharma classes, or community events.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tax-info">
+                        <h4 style="color: #ff00ff;">Tax Benefits</h4>
+                        <p>All donations are eligible for tax deduction under Section 80G of the Income Tax Act. Official receipts will be provided for all donations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Mahabodhi Visakhapatnam. All rights reserved. | "Buddham Saranam Gacchami"</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
